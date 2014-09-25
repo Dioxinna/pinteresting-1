@@ -15,17 +15,17 @@
   <tbody>
     <% @pins.each do |pin| %>
       <tr>
-         <td><%= image_tag pin.image.url %></td>
+         <td><%= image_tag pin.image.url (:thumb)%></td>
         <td><%= pin.description %></td>
         <td><%= pin.user.email if pin.user %></td>
         <!--
 <td><%= pin.user.try(:email) %></td>
       -->
-        <td><%= link_to 'Show', pin %></td>
+        <td><%= link_to 'Show', pin %>
         <% if pin.user == current_user %>
           <%= link_to 'Edit', edit_pin_path(pin) %>
           <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
+        <% end %></td>
       </tr>
     <% end %>
   </tbody>
