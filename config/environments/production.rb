@@ -80,7 +80,7 @@ Pinteresting::Application.configure do
 
 	#Requiered form Heroku
 	config.action_mailer.default_url_options = { :host => 'jralarcon.herokuapp.com' }
-
+=begin
 	config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
@@ -89,4 +89,5 @@ Pinteresting::Application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
+=end
 end
